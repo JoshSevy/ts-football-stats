@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var CSVFileReader_1 = require("./CSVFileReader");
 var reader = new CSVFileReader_1.CSVFileReader('./data/football.csv');
 reader.read();
-console.log(reader.data);
 var MatchResult;
 (function (MatchResult) {
     MatchResult["HomeWin"] = "H";

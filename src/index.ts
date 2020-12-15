@@ -3,7 +3,6 @@ import { CSVFileReader } from './CSVFileReader';
 const reader = new CSVFileReader('./data/football.csv');
 reader.read();
 
-console.log(reader.data);
 
 enum MatchResult {
   HomeWin = 'H',
