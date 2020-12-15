@@ -12,7 +12,7 @@ var CSVFileReader = /** @class */ (function () {
     }
     CSVFileReader.prototype.read = function () {
         this.data = fs_1.default
-            .readFileSync('./data/football.csv', {
+            .readFileSync(this.filename, {
             encoding: 'utf-8'
         })
             .split('\n')

@@ -1,5 +1,9 @@
 "use strict";
-var matches = ;
+Object.defineProperty(exports, "__esModule", { value: true });
+var CSVFileReader_1 = require("./CSVFileReader");
+var reader = new CSVFileReader_1.CSVFileReader('./data/football.csv');
+reader.read();
+console.log(reader.data);
 var MatchResult;
 (function (MatchResult) {
     MatchResult["HomeWin"] = "H";
@@ -8,8 +12,8 @@ var MatchResult;
 })(MatchResult || (MatchResult = {}));
 ;
 var manUnitedWins = 0;
-for (var _i = 0, matches_1 = matches; _i < matches_1.length; _i++) {
-    var match = matches_1[_i];
+for (var _i = 0, _a = reader.data; _i < _a.length; _i++) {
+    var match = _a[_i];
     if (match[1] === 'Man United' && match[5] === MatchResult.HomeWin) {
         manUnitedWins++;
     }

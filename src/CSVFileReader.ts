@@ -7,7 +7,7 @@ export class CSVFileReader {
 
   read(): void {
     this.data = fs
-      .readFileSync('./data/football.csv', {
+      .readFileSync(this.filename, {
         encoding: 'utf-8'
       })
       .split('\n')
